@@ -26,7 +26,7 @@ importers:
       chalk: ^4.1.0
       convert-hrtime: ^5.0.0
       cross-env: ^7.0.2
-      esbuild-register: ^2.3.0
+      esbuild-register: ^3.0.0
       eslint: ^8.0.0
       eslint-config-prettier: ^8.3.0
       eslint-plugin-prettier: ^4.0.0
@@ -103,7 +103,7 @@ importers:
       chalk: 4.1.2
       convert-hrtime: 5.0.0
       cross-env: 7.0.3
-      esbuild-register: 2.6.0
+      esbuild-register: 3.0.0
       eslint: 8.0.0
       eslint-config-prettier: 8.3.0_eslint@8.0.0
       eslint-plugin-prettier: 4.0.0_d9a06a67ccd5236c5645569c7624c2c9
@@ -5183,10 +5183,11 @@ packages:
     dev: true
     optional: true
 
-  /esbuild-register/2.6.0:
-    resolution: {integrity: sha512-2u4AtnCXP5nivtIxZryiZOUcEQkOzFS7UhAqibUEmaTAThJ48gDLYTBF/Fsz+5r0hbV1jrFE6PQvPDUrKZNt/Q==}
+  /esbuild-register/3.0.0:
+    resolution: {integrity: sha512-No7U3ZUd6gPrrC6gqdb3XFcf2lNqzn8nvQXcgcyOl8szMVuN6YUvOplnmakxWyogI9d8SiJMl0uzBzJck+Aoxw==}
+    peerDependencies:
+      esbuild: '>=0.12 <1'
     dependencies:
-      esbuild: 0.12.29
       jsonc-parser: 3.0.0
     dev: true
 
@@ -5221,12 +5222,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /esbuild/0.12.29:
-    resolution: {integrity: sha512-w/XuoBCSwepyiZtIRsKsetiLDUVGPVw1E/R3VTFSecIy8UR7Cq3SOtwKHJMFoVqqVG36aGkzh4e8BvpO1Fdc7g==}
-    hasBin: true
-    requiresBuild: true
-    dev: true
 
   /esbuild/0.13.4:
     resolution: {integrity: sha512-wMA5eUwpavTBiNl+It6j8OQuKVh69l6z4DKDLzoTIqC+gChnPpcmqdA8WNHptUHRnfyML+mKEQPlW7Mybj8gHg==}
@@ -6036,6 +6031,18 @@ packages:
         optional: true
     dev: true
 
+  /follow-redirects/1.14.4_debug@4.3.2:
+    resolution: {integrity: sha512-zwGkiSXC1MUJG/qmeIFH2HBJx9u0V46QGUe3YR1fXG8bXQxq7fLj0RjLZQ5nubr9qNJUZrH+xUcwXEoXNpfS+g==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.2_supports-color@6.1.0
+    dev: true
+
   /for-in/0.1.8:
     resolution: {integrity: sha1-2Hc5COMSVhCZUrH9ubP6hn0ndeE=}
     engines: {node: '>=0.10.0'}
@@ -6810,7 +6817,7 @@ packages:
     engines: {node: '>=8.0.0'}
     dependencies:
       eventemitter3: 4.0.7
-      follow-redirects: 1.14.4
+      follow-redirects: 1.14.4_debug@4.3.2
       requires-port: 1.0.0
     transitivePeerDependencies:
       - debug
