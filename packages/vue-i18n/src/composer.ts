@@ -1328,6 +1328,13 @@ export function createComposer<
       locale: _locale.value,
       fallbackLocale: _fallbackLocale.value,
       messages: _messages.value,
+      messageCompiler: __RUNTIME__
+        ? function compileToFunction(source) {
+            return (ctx: any) => {
+              return ctx.normalize([source])
+            }
+          }
+        : null,
       datetimeFormats: _datetimeFormats.value,
       numberFormats: _numberFormats.value,
       modifiers: _modifiers,
